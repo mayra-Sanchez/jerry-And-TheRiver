@@ -1,0 +1,186 @@
+html {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+body {
+  background: url("../images/Fondo.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#pagina {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 100%;
+
+  align-items: center;
+}
+
+#boton_jugar {
+  display: block;
+  cursor: pointer;
+  width: 280px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#boton_instrucciones {
+  display: block;
+  cursor: pointer;
+  width: 280px;
+  margin-top: 40px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#boton_integrantes {
+  display: block;
+  cursor: pointer;
+  width: 280px;
+  margin-top: 40px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#boton_jugar:hover,
+#boton_instrucciones:hover,
+#boton_integrantes:hover {
+  opacity: 0.9;
+  background: rgb(13, 153, 126);
+}
+
+#boton_play {
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+}
+
+#boton_pause {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+}
+
+#boton_integrantes.hide,
+#boton_jugar.hide,
+#boton_instrucciones.hide,
+#boton_pause.hide,
+#boton_play.hide {
+  display: none;
+}
+#game-status {
+  background: #000;
+  width: 189px;
+  height: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: karla;
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+}
+
+#canvas {
+  margin-top: 0px;
+  margin-left: 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 0px;
+  position: relative;
+}
+
+#canvas:focus {
+  outline: none;
+}
+
+#canvas-container {
+  display: none;
+  position: relative;
+  width: 900px;
+  z-index: 1;
+}
+
+#canvas-container.show,
+#instrucciones.show,
+#integrantes.show {
+  display: block;
+}
+
+
+#go-menu {
+  height: 25px;
+  width: 25px;
+}
+
+#vidas {
+  margin-right: 35px;
+  margin-left: 5px;
+}
+
+#puntaje {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#back {
+  display: block;
+  margin: 5px;
+  margin-left: 5px;
+  align-items: center;
+  position: absolute;
+}
+
+#integrantes {
+  display: none;
+  width: 400px;
+  height: 440px !important;
+  background-color: rgb(140, 216, 216);
+  color: #000000;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 17px;
+  box-shadow: 0px 0px 40px 40px white;
+  border-radius: 50px;
+}
+
+#instrucciones {
+  display: none;
+  width: 888px;
+  height: 420px !important;
+  background-color: rgb(140, 216, 216);
+  color: #000000;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 17px;
+  box-shadow: 0px 0px 40px 40px white;
+  border-radius: 50px;
+}
+
+#integrantes h1,
+#instrucciones h1 {
+  color: #ff0000;
+  font-size: 40px;
+}
