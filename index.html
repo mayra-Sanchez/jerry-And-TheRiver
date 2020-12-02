@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jerry and the river</title>
+
+    <!--Se invoca el icono que va en la pestaña-->
+    <link rel="shortcut icon" href="Icono.ico">
+
+    <!--Se importa la fuente Rubik de google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Se invoca el archivo css-->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!--Se importa la libreria functional light-->
+    <script src="library/jquery-3.1.1.min.js"></script>
+    <script src="library/processing.js"></script>
+    <script src="library/fl-extended.js"></script>
+  </head>
+
+  <body>
+    <div id="pagina">
+      <!--Aqui se importan las imagenes de los botones-->
+      <div class="button-container">
+        <img src="images/Jugar.png" id="boton_jugar" />
+        <img src="images/Como_jugar.png" id="boton_instrucciones" />
+        <img src="images/Integrantes.png" id="boton_integrantes" />
+        <img src="images/Play.png" id="boton_play" />
+        <img src="images/Pause.png" id="boton_pause" />
+      </div>
+
+      <div id="canvas-container">
+         <!--En este div se muestra el puntaje y las vidas-->
+        <div id="game-status">
+          Vidas: <span id="vidas">3</span> Puntaje: <span id="puntaje">0</span>
+        </div>
+
+        <canvas id="canvas" tabindex="0" width="888" height="555">
+          <!-- Aca se deberia dibujar el canvas -->
+        </canvas>
+
+        <!--Boton para regresar al menu-->
+        <button id="back-juego">Regresar</button>
+      </div>
+
+      <!--div que contiene las instrucciones-->
+      <div id="instrucciones">
+        <div style="margin: 100px; margin-top: 40px">
+          <h1>INSTRUCCIONES</h1>
+          <p>
+            1. Al iniciar el juego, Jerry debe comer todas las uvas y quesos que
+            se encuentran en el mapa.
+          </p>
+          <p>
+            2. En las partes laterales se encuentran muros invisibles, Jerry
+            debe evitarlos para permanecer con vida.
+          </p>
+          <p>
+            3. Durante el juego aparecerá el agua, que se encargará de impedir
+            que Jerry se coma todas las uvas y los quesos.
+          </p>
+          <p>
+            4. Si Jerry se come todas las uvas y quesos, habrá ganado el juego.
+          </p>
+          <p>
+            5. Si las vidas de Jerry llegan a cero, Jerry muere y vuelve al
+            menú.
+          </p>
+          <p>
+            6. Jerry se mueve con las flechas de tu teclado en cualquier
+            dirección.
+          </p>
+          <br />
+          <br />
+
+          <!--Boton para regresar al menu-->
+          <button id="back-instrucciones">Regresar</button>
+        </div>
+      </div>
+
+      <!--div que contiene los integrantes del grupo-->
+      <div id="integrantes">
+        <div style="margin: 100px; margin-top: 40px">
+          <h1>Equipo de desarrollo</h1>
+          <h3>Mayra Sánchez Salinas</h3>
+          <h3>Jhon Alexander Valencia</h3>
+          <h3>Brayan Stiven Sánchez</h3>
+          <h3>Sergio Escudero Tabares</h3>
+          <br />
+
+          <!--Boton para regresar al menu-->
+          <button id="back-integrantes">Regresar</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Se importa la imagen del queso-->
+    <img src="images/Queso.png" id="queso" style="display: none">
+
+    <!--Se importa los scripts del juego-->
+    <script src="scripts/jerry.js"></script>
+    <script src="scripts/aqua.js"></script>
+    <script src="scripts/frut_cheese.js"></script>
+    <script src="scripts/DOM.js"></script>
+    <script src="scripts/game.js"></script>
+  </body>
+</html>
